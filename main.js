@@ -57,8 +57,8 @@ if (typeof isElementary === 'undefined') {
   isElementary = undefined;
 }
 
-if (typeof differentPeople === 'undefined') {
-  differentPeople = undefined;
+if (typeof areDifferentPeople === 'undefined') {
+  areDifferentPeople = undefined;
 }
 
 if (typeof notAnElementarySchoolAdministrator === 'undefined') {
@@ -82,7 +82,7 @@ module.exports = {
   isTeacher,
   isAdmin,
   isElementary,
-  differentPeople,
+  areDifferentPeople,
   notAnElementarySchoolAdministrator,
   isMiddleSchoolTeacher,
 }
