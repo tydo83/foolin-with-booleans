@@ -8,7 +8,7 @@ Just your typical fork, clone, and run the tests kind of exercise!
 ### Tasks
 
 * Write a function called `moreThan5` that takes in a number and returns whether or not it's greater than `5`.
-* Write a function called `topScore` that takes in a score (as a number) and a top score (as a number) and returns whether or not the score is greater than the top score. (This would be a good function in a game or gamified app to see if we need to update the high score to a new one.)
+* Write a function called `isNewTopScore` that takes in a score (as a number) and a top score (as a number) and returns whether or not the score is greater than the top score. (This would be a good function in a game or gamified app to see if we need to update the high score to a new one.)
 * Write a function called `isInDanger` that takes in a grade (as a number) and returns whether or not it's between `60` and `71`, _inclusive_.
 * Write a function called `isCoasting` that takes in a grade (as a number) and returns whether or not it's between `72` and `83`, _inclusive_.
 * Write a function called `isSucceeding` that takes in a grade (as a number) and returns whether or not its between `84` and `92`, _inclusive_.
