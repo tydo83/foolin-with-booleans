@@ -17,8 +17,8 @@ if (typeof moreThan5 === 'undefined') {
   moreThan5 = undefined;
 }
 
-if (typeof topScore === 'undefined') {
-  topScore = undefined;
+if (typeof isNewTopScore === 'undefined') {
+  isNewTopScore = undefined;
 }
 
 if (typeof isInDanger === 'undefined') {
@@ -72,7 +72,7 @@ if (typeof isMiddleSchoolTeacher === 'undefined') {
 
 module.exports = {
   moreThan5,
-  topScore,
+  isNewTopScore,
   isInDanger,
   isCoasting,
   isSucceeding,

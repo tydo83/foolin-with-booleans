@@ -1,6 +1,6 @@
 const {
   moreThan5,
-  topScore,
+  isNewTopScore,
   isInDanger,
   isCoasting,
   isSucceeding,
@@ -23,11 +23,11 @@ describe('moreThan5', () => {
   })
 })
 
-describe('topScore', () => {
-  it('returns whether the first number is greater than the second', () => {
-    expect(topScore(5, 15)).toBe(false)
-    expect(topScore(5, 5)).toBe(false)
-    expect(topScore(15, 5)).toBe(true)
+describe('isNewTopScore', () => {
+  it('returns whether the first number (the new score) is greater than the second (the old top score)', () => {
+    expect(isNewTopScore(5, 15)).toBe(false)
+    expect(isNewTopScore(5, 5)).toBe(false)
+    expect(isNewTopScore(15, 5)).toBe(true)
   })
 })
 
@@ -104,14 +104,14 @@ describe('isAdmin', () => {
 describe('isElementary', () => {
   it('returns whether the given string is `elementary`', () => {
     expect(isElementary('elementary')).toBe(true)
+    expect(isElementary('college')).toBe(false)
     expect(isElementary('lmnty')).toBe(false)
     expect(isElementary('elementary my dear watson')).toBe(false)
-    expect(isElementary('college')).toBe(false)
   })
 })
 
 describe('areDifferentPeople', () => {
-  it('returns whether two names are identical or not', () => {
+  it('returns whether two names are different or not', () => {
     expect(areDifferentPeople('colin', 'messi')).toBe(true)
     expect(areDifferentPeople('colin', 'col')).toBe(true)
     expect(areDifferentPeople('colin', 'coln')).toBe(true)
@@ -122,7 +122,9 @@ describe('areDifferentPeople', () => {
 
 describe('isMiddleSchoolTeacher', () => {
   it('returns whether the first parameter is the string `teacher` AND the second parameter is a number from 6-8 inclusive', () => {
+    expect(isMiddleSchoolTeacher('admin', 12)).toBe(false)
     expect(isMiddleSchoolTeacher('admin', 7)).toBe(false)
+    expect(isMiddleSchoolTeacher('student', 7)).toBe(false)
     expect(isMiddleSchoolTeacher('teacher', 5)).toBe(false)
     expect(isMiddleSchoolTeacher('teacher', 6)).toBe(true)
     expect(isMiddleSchoolTeacher('teacher', 7)).toBe(true)
@@ -132,7 +134,7 @@ describe('isMiddleSchoolTeacher', () => {
 })
 
 describe('notAnElementarySchoolAdministrator', () => {
-  it('returns whether the first given string is NOT `elementary` OR whether the second given string is NOT `admin`', () => {
+  it('returns whether the first given string is NOT `elementary` OR the second given string is NOT `admin`', () => {
     expect(notAnElementarySchoolAdministrator('elementary', 'admin')).toBe(false)
     expect(notAnElementarySchoolAdministrator('college', 'guidance counselor')).toBe(true)
     expect(notAnElementarySchoolAdministrator('elementary', 'teacher')).toBe(true)
