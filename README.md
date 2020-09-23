@@ -1,4 +1,4 @@
-# Twolean - Boolean Comparisons
+# Foolin' With Booleans
 
 ### Workflow
 
